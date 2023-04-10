@@ -1,0 +1,29 @@
+﻿@model CommonEntities.UsersModels.User
+
+<table class="table">
+    <tr>
+        <td style="font-weight: bold;">@Html.LabelFor(m=>m.Id)</td>
+        <td>:</td>
+        <td>@Html.DisplayFor(m=>m.Id)</td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold;">@Html.LabelFor(m=>m.Name)</td>
+        <td>:</td>
+        <td>@Html.DisplayFor(m=>m.Name)</td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold;">@Html.LabelFor(m=>m.EmailAddress)</td>
+        <td>:</td>
+        <td>@Html.DisplayFor(m=>m.EmailAddress)</td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold;">@Html.LabelFor(m=>m.Gender)</td>
+        <td>:</td>
+        <td>@Html.DisplayFor(m=>m.Gender)</td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold;">@Html.LabelFor(m=>m.Status)</td>
+        <td>:</td>
+        <td>@Html.DisplayFor(m=>m.Status)</td>
+    </tr>
+</table>

@@ -1,0 +1,19 @@
+﻿@model CommonEntities.UsersModels.User
+
+@{
+    ViewData["Title"] = "Employee";
+}
+
+
+ <div class="row">
+        <div class="col-md-6 offset-3">
+        <div class="card-body cardwhite">
+            <h3>@ViewData["Title"]</h3>
+            <hr />
+            @await Html.PartialAsync("_PartialEmployeeDetails", Model)
+            <a href="/" style="float:right" class="btn btn-primary">Back</a>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>

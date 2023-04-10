@@ -1,0 +1,17 @@
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\bin\Debug\net7.0\BusinessAccessLayer.deps.json
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\bin\Debug\net7.0\BusinessAccessLayer.dll
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\bin\Debug\net7.0\BusinessAccessLayer.pdb
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\bin\Debug\net7.0\CommonEntities.dll
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\bin\Debug\net7.0\DataAccessLayer.dll
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\bin\Debug\net7.0\CommonEntities.pdb
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\bin\Debug\net7.0\DataAccessLayer.pdb
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\obj\Debug\net7.0\BusinessAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\obj\Debug\net7.0\BusinessAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\obj\Debug\net7.0\BusinessAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\obj\Debug\net7.0\BusinessAccessLayer.AssemblyInfo.cs
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\obj\Debug\net7.0\BusinessAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\obj\Debug\net7.0\BusinessAccessLayer.csproj.CopyComplete
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\obj\Debug\net7.0\BusinessAccessLayer.dll
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\obj\Debug\net7.0\refint\BusinessAccessLayer.dll
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\obj\Debug\net7.0\BusinessAccessLayer.pdb
+C:\Users\Sujatha\source\repos\BusinessAccessLayer\obj\Debug\net7.0\ref\BusinessAccessLayer.dll

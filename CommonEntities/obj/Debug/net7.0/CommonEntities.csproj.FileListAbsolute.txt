@@ -1,0 +1,12 @@
+C:\Users\Sujatha\source\repos\CommonEntities\bin\Debug\net7.0\CommonEntities.deps.json
+C:\Users\Sujatha\source\repos\CommonEntities\bin\Debug\net7.0\CommonEntities.dll
+C:\Users\Sujatha\source\repos\CommonEntities\bin\Debug\net7.0\CommonEntities.pdb
+C:\Users\Sujatha\source\repos\CommonEntities\obj\Debug\net7.0\CommonEntities.csproj.AssemblyReference.cache
+C:\Users\Sujatha\source\repos\CommonEntities\obj\Debug\net7.0\CommonEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sujatha\source\repos\CommonEntities\obj\Debug\net7.0\CommonEntities.AssemblyInfoInputs.cache
+C:\Users\Sujatha\source\repos\CommonEntities\obj\Debug\net7.0\CommonEntities.AssemblyInfo.cs
+C:\Users\Sujatha\source\repos\CommonEntities\obj\Debug\net7.0\CommonEntities.csproj.CoreCompileInputs.cache
+C:\Users\Sujatha\source\repos\CommonEntities\obj\Debug\net7.0\CommonEntities.dll
+C:\Users\Sujatha\source\repos\CommonEntities\obj\Debug\net7.0\refint\CommonEntities.dll
+C:\Users\Sujatha\source\repos\CommonEntities\obj\Debug\net7.0\CommonEntities.pdb
+C:\Users\Sujatha\source\repos\CommonEntities\obj\Debug\net7.0\ref\CommonEntities.dll

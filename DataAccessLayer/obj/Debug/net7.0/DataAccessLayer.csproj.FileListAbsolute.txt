@@ -1,0 +1,15 @@
+C:\Users\Sujatha\source\repos\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.deps.json
+C:\Users\Sujatha\source\repos\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.dll
+C:\Users\Sujatha\source\repos\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.pdb
+C:\Users\Sujatha\source\repos\DataAccessLayer\bin\Debug\net7.0\CommonEntities.dll
+C:\Users\Sujatha\source\repos\DataAccessLayer\bin\Debug\net7.0\CommonEntities.pdb
+C:\Users\Sujatha\source\repos\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Sujatha\source\repos\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sujatha\source\repos\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Sujatha\source\repos\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Sujatha\source\repos\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Sujatha\source\repos\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\Sujatha\source\repos\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.dll
+C:\Users\Sujatha\source\repos\DataAccessLayer\obj\Debug\net7.0\refint\DataAccessLayer.dll
+C:\Users\Sujatha\source\repos\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.pdb
+C:\Users\Sujatha\source\repos\DataAccessLayer\obj\Debug\net7.0\ref\DataAccessLayer.dll

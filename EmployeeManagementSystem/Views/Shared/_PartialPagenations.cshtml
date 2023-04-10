@@ -1,0 +1,52 @@
+﻿@model CommonEntities.UsersModels.Pagination
+
+@{
+    int currentPage = Model.Page;
+    int totalPage = Model.Pages;
+}
+<ul class="pagination" style="float:left;">
+    <li class="page-item">
+        <a href="#" class=" page-link">
+            Total Pages : @totalPage
+        </a>
+    </li>
+</ul>
+<ul class="pagination" style="float:right;">
+    @if (currentPage > 1)
+    {
+        <li class="page-item">
+            <a href="@Url.Action("Index", new { pageId = 1})"
+               class=" page-link">
+                &laquo; First
+            </a>
+        </li>
+        <li class="page-item">
+            <a href="@Url.Action("Index", new { pageId = (currentPage-1)})"
+               class=" page-link">
+                &laquo; Previous
+            </a>
+        </li>
+    }
+    <li class="page-item active">
+        <a href="@Url.Action("Index", new { pageId = currentPage})"
+           class=" page-link">
+            @currentPage
+        </a>
+    </li>
+    @if (currentPage < totalPage)
+    {
+        <li class="page-item">
+            <a href="@Url.Action("Index", new { pageId = (currentPage+1)})"
+               class=" page-link">
+                Next &raquo;
+            </a>
+        </li>
+        <li class="page-item">
+            <a href="@Url.Action("Index", new { pageId = (totalPage)})"
+               class=" page-link">
+                Last &raquo;
+            </a>
+        </li>
+    }
+    
+</ul>

@@ -1,0 +1,20 @@
+﻿@model CommonEntities.UsersModels.User
+@{
+    ViewData["Title"] = "Add New Employee";
+}
+
+
+ <div class="row">
+        <div class="col-md-6 offset-3">
+        <div class="card-body cardwhite">
+            <h3>@ViewData["Title"]</h3>
+            <hr />
+            @using (Html.BeginForm("Add", "Employee", FormMethod.Post))
+            {
+                @await Html.PartialAsync("_PartialAddEdit", Model)
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a href="/" class="btn btn-secondary">Back</a>
+            }
+        </div>
+    </div>
+</div>

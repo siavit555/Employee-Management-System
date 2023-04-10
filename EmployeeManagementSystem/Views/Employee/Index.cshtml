@@ -1,0 +1,60 @@
+﻿@model CommonEntities.UsersModels.UserDetails
+
+@{
+    ViewData["Title"] = "Employee Details";
+    int? currentPage = Model?.Meta?.Pagination?.Page;
+}
+
+
+
+<div class="card-body cardwhite">
+
+    <div class=row>
+        <div class="col-6">
+            <h4>@ViewData["Title"]</h4>
+        </div>
+        <div class="col-6">
+            @using (Html.BeginForm("ExportToExcel", "Employee", new { pageId = currentPage }, FormMethod.Post))
+            {
+              <input style="float:right" type="submit" class="btn btn-warning" value="Export to Excel" />
+            }
+            <a style="float:right" href="Employee/Add" class="btn btn-success">Add New</a>
+        </div>
+    </div>
+
+    <hr />
+    <table class="table table-sm table-hover table-bordered">
+        <thead class="bg-info">
+            <tr>
+                <th scope="col">Emp #</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email Address</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Status</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+                <th scope="col">View</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var emp in Model.Users)
+            {
+                <tr>
+                    <th scope="row">@emp.Id</th>
+                    <td>@emp.Name</td>
+                    <td>@emp.EmailAddress</td>
+                    <td>@emp.Gender</td>
+                    <td>@emp.Status</td>
+                    <td><a href="/Employee/Edit/@emp.Id" class="btn btn-primary btn-sm">Edit</a></td>
+                    <td><a href="/Employee/Delete/@emp.Id" class="btn btn-danger btn-sm">Delete</a></td>
+                    <td><a href="/Employee/View/@emp.Id" class="btn btn-secondary btn-sm">View</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    @await Html.PartialAsync("_PartialPagenations", Model?.Meta?.Pagination)
+    <br />
+    <br />
+</div>

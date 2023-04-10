@@ -1,0 +1,54 @@
+﻿@*@model Exception*@
+@{
+    Layout = null;
+    ViewData["Title"] = "Error Page";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            /*justify-content: center;*/
+            align-items: center;
+            height: 100vh;
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: calc(4em + 10vw);
+            text-align: center;
+            color: #fff;
+            background-image: linear-gradient(-225deg, #cf2778, #7c64d5, #4cc3ff);
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 75px;
+            font-weight: 200;
+            text-shadow: 0 0 0.1em rgba(0, 0, 0, 0.5);
+            margin: 0px;
+            margin-top: 150px;
+        }
+
+            h1 span::after {
+                font-size: 0.9em;
+                animation: clock 5s linear infinite;
+            }
+
+        h2 {
+            font-size: 40px;
+            font-weight: 200;
+            line-height: 1.2;
+            text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.5);
+            margin: 0px;
+           
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <h1 aria-label="404 Error">Error</h1>
+    <h2>An error occurred While processing your request.</h2>
+</body>
+</html>

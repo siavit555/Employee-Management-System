@@ -1,0 +1,22 @@
+﻿@model CommonEntities.UsersModels.User
+
+@{
+    ViewData["Title"] = "Delete Employee";
+}
+
+
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <div class="card-body cardwhite">
+            @using (Html.BeginForm("DeleteByEmpId", "Employee", new { id = Model.Id }, FormMethod.Post))
+            {
+            <h3>Are you sure! Want to delete this Employee?</h3>
+            <hr />
+                @await Html.PartialAsync("_PartialEmployeeDetails", Model)
+            <br />
+            <button type="submit" class="btn btn-primary">Yes</button>
+            <a href="/" class="btn btn-secondary">No</a>
+            }
+        </div>
+    </div>
+</div>

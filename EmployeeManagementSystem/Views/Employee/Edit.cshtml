@@ -1,0 +1,40 @@
+﻿@model CommonEntities.UsersModels.User
+@{
+    ViewData["Title"] = "Edit Employee";
+}
+
+
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <div class="card-body cardwhite">
+            <h3>@ViewData["Title"]</h3>
+            <hr />
+            @using (Html.BeginForm("EditEmployee", "Employee", FormMethod.Post))
+            {
+                @Html.HiddenFor(m=>m.Id)
+                @await Html.PartialAsync("_PartialAddEdit",  Model)
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a href="/" class="btn btn-secondary">Back</a>
+                <input type="hidden" id="hdngender" value="@Model.Gender">
+                <input type="hidden" id="hdnstatus" value="@Model.Status">
+            }
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#Gender option').each(function () {
+            if ($(this).text().toLowerCase() == $('#hdngender').val()) {
+                $(this).prop('selected', true).trigger('change');
+            }
+        });
+
+        $('#Status option').each(function () {
+            if ($(this).text().toLowerCase() == $('#hdnstatus').val()) {
+                $(this).prop('selected', true).trigger('change');
+            }
+        });
+    });
+</script>
