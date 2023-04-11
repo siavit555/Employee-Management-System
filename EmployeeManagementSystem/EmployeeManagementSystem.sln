@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "..\DataA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessAccessLayer", "..\BusinessAccessLayer\BusinessAccessLayer.csproj", "{D6EF5C77-C0D0-4319-B69B-BE4A46219DCD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagementSystem.Test", "..\EMSTest\EmployeeManagementSystem.Test.csproj", "{492BAE61-239C-4417-B42A-CCD21477ECF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagementSystem.Test", "..\EmployeeManagementSystem.Test\EmployeeManagementSystem.Test.csproj", "{492BAE61-239C-4417-B42A-CCD21477ECF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
