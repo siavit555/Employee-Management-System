@@ -14,7 +14,7 @@ namespace CommonEntities.UsersModels
         public string? Name { get; set; }
 
         [DataMember(Name = "email"), Required, DisplayName("Email Address")]
-        public string EmailAddress { get; set; }
+        public string? EmailAddress { get; set; }
 
         [DataMember(Name = "gender")]
         public string? Gender { get; set; }

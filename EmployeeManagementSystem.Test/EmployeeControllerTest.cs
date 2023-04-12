@@ -71,7 +71,7 @@ namespace EmployeeManagementSystem.Test
             empController.ViewData.ModelState.AddModelError("Name", "The Name is Required");
 
             //act
-            empController.Add(inValidUser);
+            _ = empController.Add(inValidUser);
 
             //assert
             Assert.IsTrue(!empController.ModelState.IsValid);
@@ -91,7 +91,7 @@ namespace EmployeeManagementSystem.Test
             //assert
             Assert.IsNotNull(userDetails);
             Assert.IsNotNull(viewResult?.Model);
-            Assert.AreEqual(5, userDetails?.Users?.Count());
+            Assert.AreEqual(5, userDetails?.Users?.Count);
             Assert.IsTrue(string.IsNullOrEmpty(viewResult.ViewName) || viewResult.ViewName == "Index");
         }
 
@@ -178,7 +178,7 @@ namespace EmployeeManagementSystem.Test
             empController.ViewData.ModelState.AddModelError("EmailAddress", "The Email Address is Required");
 
             //act
-            empController.EditEmployee(inValidUser);
+            _ = empController.EditEmployee(inValidUser);
 
             //assert
             Assert.IsTrue(!empController.ModelState.IsValid);

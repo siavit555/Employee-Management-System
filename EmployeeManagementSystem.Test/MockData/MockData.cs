@@ -14,7 +14,7 @@ namespace EmployeeManagementSystem.Test.MockData
 {
     public static class MockData
     {
-        public static Task<UserDetails> GetTestEmployeeDetails()
+        public static Task<UserDetails?> GetTestEmployeeDetails()
         {
             var users = new List<User>() {
                    new User() {
@@ -64,17 +64,19 @@ namespace EmployeeManagementSystem.Test.MockData
                               }
             };
 
-            UserDetails userDetails = new UserDetails()
+            UserDetails userDetails = new()
             {
                 StatusCode="200",
                 Meta=meta,
                 Users=users
             };
-          
+
+#pragma warning disable CS8619 // Nullability of reference types in value doesn't match target type.
             return Task.FromResult(userDetails);
+#pragma warning restore CS8619 // Nullability of reference types in value doesn't match target type.
         }
 
-        public static Task<UserDetail> GetTestEmployee()
+        public static Task<UserDetail?> GetTestEmployee()
         {
             var meta = new Meta()
             {
@@ -86,7 +88,7 @@ namespace EmployeeManagementSystem.Test.MockData
                 }
             };
 
-            UserDetail userDetail = new UserDetail()
+            UserDetail userDetail = new()
             {
                 StatusCode = "200",
                 Meta = meta,
@@ -100,12 +102,14 @@ namespace EmployeeManagementSystem.Test.MockData
                 }
             };
 
+#pragma warning disable CS8619 // Nullability of reference types in value doesn't match target type.
             return Task.FromResult(userDetail);
+#pragma warning restore CS8619 // Nullability of reference types in value doesn't match target type.
         }
 
-        public static Task<User> GetTestEmployeeDetailsById()
+        public static Task<User?> GetTestEmployeeDetailsById()
         {
-            var users = new User()
+            User users = new()
                        {
                            Id = 1,
                            Name = "TestEmployee1",
@@ -114,18 +118,20 @@ namespace EmployeeManagementSystem.Test.MockData
                            Status = "active"
                        };
 
+#pragma warning disable CS8619 // Nullability of reference types in value doesn't match target type.
             return Task.FromResult(users);
+#pragma warning restore CS8619 // Nullability of reference types in value doesn't match target type.
         }
 
-        public static Task<UserDetails> GetTestEmployeeDetails_Exception()
+        public static Task<UserDetails?> GetTestEmployeeDetails_Exception()
         {
             throw new Exception();
         }
 
         public static Task<MemoryStream> GetTestEmployeeDetailsForExcel()
         {
-            MemoryStream memoryStream = new MemoryStream();
-            DataTable dtEmployees = new DataTable(AppConstant.EXCEL_SHEETNAME);
+            MemoryStream memoryStream = new();
+            DataTable dtEmployees = new(AppConstant.EXCEL_SHEETNAME);
             dtEmployees.Columns.AddRange(new DataColumn[5] { new DataColumn(AppConstant.EXCEL_FIELD_NAME_EMPLOYEEID),
                                         new DataColumn(AppConstant.EXCEL_FIELD_NAME_NAME),
                                         new DataColumn(AppConstant.EXCEL_FIELD_NAME_EMAIL),
@@ -137,7 +143,7 @@ namespace EmployeeManagementSystem.Test.MockData
             {
                 dtEmployees.Rows.Add(data.Users[i].Id, data.Users[i].Name, data.Users[i].EmailAddress, data.Users[i].Gender, data.Users[i].Status);
             }
-            using (XLWorkbook wb = new XLWorkbook())
+            using (XLWorkbook wb = new())
             {
                 wb.Worksheets.Add(dtEmployees);
                 wb.SaveAs(memoryStream);

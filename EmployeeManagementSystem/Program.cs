@@ -16,9 +16,9 @@ builder.Services.AddControllersWithViews();
 //Custom Exception
 builder.Services.AddControllersWithViews(config => config.Filters.Add(typeof(CustomExceptionFilter)));
 
-
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("GorestApiSettings"));
 builder.Services.AddScoped<IEmployee, Employee>();
-builder.Services.AddSingleton<IApiClient>(sp => new ApiClient(builder.Configuration.GetSection("GorestApiSettings").Get<AppSettings>()));
+builder.Services.AddSingleton<IApiClient, ApiClient>();
 
 
 var app = builder.Build();

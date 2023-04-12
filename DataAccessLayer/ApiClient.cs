@@ -8,6 +8,7 @@ using CommonEntities.Constants;
 using CommonEntities.UsersModels;
 using System.Net.Http.Json;
 using System.Data;
+using Microsoft.Extensions.Options;
 
 namespace DataAccessLayer
 {
@@ -18,10 +19,10 @@ namespace DataAccessLayer
         private readonly AppSettings _appSettings;
 
 
-        public ApiClient(AppSettings appSettings)
+        public ApiClient(IOptions<AppSettings> appSettings)
         {
-            _appSettings = appSettings;
-            _baseEndpoint = new Uri(appSettings.WebapiBaseUrl);
+            _appSettings = appSettings.Value;
+            _baseEndpoint = new Uri(_appSettings.WebapiBaseUrl);
             _httpClient = new HttpClient();
             AddHeaders();
         }
@@ -110,13 +111,15 @@ namespace DataAccessLayer
         private Uri CreateRequestUri(string relativePath, string queryString = "")
         {
             var endPoint = new Uri(_baseEndpoint, relativePath);
-            var uriBuilder = new UriBuilder(endPoint);
-            uriBuilder.Query = queryString;
+            var uriBuilder = new UriBuilder(endPoint)
+            {
+                Query = queryString
+            };
             return uriBuilder.Uri;
         }
 
         // Create Http Content
-        private HttpRequestMessage CreateHttpContent<T>(T content)
+        private static HttpRequestMessage CreateHttpContent<T>(T content)
         {
             var jsonUserDetail = JsonConvert.SerializeObject(content);
             var reqMessage = new HttpRequestMessage

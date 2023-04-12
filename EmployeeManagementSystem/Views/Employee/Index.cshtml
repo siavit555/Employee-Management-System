@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Employee Details";
     int? currentPage = Model?.Meta?.Pagination?.Page;
+
 }
 
 
@@ -37,7 +38,8 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var emp in Model.Users)
+            @if(Model?.Users is not null)
+            foreach (var emp in Model.Users)
             {
                 <tr>
                     <th scope="row">@emp.Id</th>
